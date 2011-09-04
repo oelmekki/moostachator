@@ -3,8 +3,6 @@ source "http://rubygems.org"
 # Declare your gem's dependencies in moostachator.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
-gem 'mootools-rails'
-gem 'mustache'
 gemspec
 
 # Declare any dependencies that are still in development here instead of in
@@ -13,4 +11,4 @@ gemspec
 # your gem to rubygems.org.
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+# gem 'ruby-debug19', :require => 'ruby-debug'
