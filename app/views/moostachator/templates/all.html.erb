@@ -1,0 +1,7 @@
+<% @templates.each do |full_name, template| %>
+<%= render :partial => 'template', :locals => { :full_name => full_name, :template => template, :is_partial => false } %>
+<% end %>
+
+<% @partials.each do |full_name, template| %>
+<%= render :partial => 'template', :locals => { :full_name => full_name, :template => template, :is_partial => true } %>
+<% end %>
