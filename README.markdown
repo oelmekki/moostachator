@@ -9,16 +9,19 @@ The javascript framework provided also handle pushtate routing (with hashtag rou
 # Installation
 
 1°) Add in your Gemfile :
+
     gem 'moostachator', :git => 'git://github.com/oelmekki/moostachator.git'
 
 2°) run "bundle install"
 
 3°) Add in your config/routes.rb :
+
     mount Moostachator::Engine => "/moostachator"
 
 4°) Create directory app/templates/
 
 5°) Add in your app/assets/javascripts/application.js :
+
     //= require mootools
     //= require mootools-more
     //= require mootools_ujs
@@ -90,9 +93,11 @@ Don't be afraid of repeating this command. If the template is already cached, it
 Thanks to babilu, all your locales are available through I18n object. See [the project page](https://github.com/toretore/babilu) for more on its usage.
 
 In mustache templates, you can use _i to access locales :
+
     {{_i.articles.title}}
 
 Is the same as erb :
+
     <%=t 'articles.title' %>
 
 
@@ -104,7 +109,11 @@ moostachator includes my [moo-nojs-mvc framework](https://github.com/oelmekki/mo
 # Aknowledgment
 
 Moostachator is based upon some great libs :
+
 * [mustache](https://github.com/defunkt/mustache), the logic free templating engine
+
 * [mustache.js](https://github.com/janl/mustache.js), mustache javascript support
+
 * [poirot](https://github.com/olivernn/poirot), rails mustache support
+
 * [babilu](https://github.com/toretore/babilu), make locales accessible through javascript
