@@ -1,7 +1,9 @@
 Moostachator is a rails-3.1 engine thought to let you share your templates between server and client side.
 
 Load a page, it's generated through server side, no wait for domready.
+
 Want to go to an other page using js? Generate the page with mustache.js.
+
 The javascript framework provided also handle pushtate routing (with hashtag routing fallback). So your users can benefit of fast javascript rendering (client side rendering), and fast reloading (server side rendering) without any need for you to duplicate dom generation.
 
 # Installation
@@ -39,8 +41,11 @@ You're done.
 ## Create a page
 
 Add your mustache template in app/templates/<controller_name>/<action_name>.html.mustache
+
 Add your view class in app/views/<controller_name>/<action_name>.rb
+
 Example from poirot :
+
     app/views/posts/post_list_view.rb
 
     module Posts
@@ -59,9 +64,11 @@ Example from poirot :
 ## Get templates from javascript
 
 Load and cache all templates :
+
     Framework.Template.requestAll( '/moostachator/templates' );
 
 You can then access a template this way :
+
     Framework.Template.request( '<controller_name>_<template_name>', function( template ){
       var template_string = template.render( data ); // bind object data to mustache template and render it as string
       var $template = template.toElement( data ); // bind object data to mustache template and return template as Element
@@ -69,6 +76,7 @@ You can then access a template this way :
 
 
 If you doesn't want to load all templates, but only one when needed, you can rather pass an url :
+
     Framework.Template.request( '<controller_name>_<template_name>', '/moostachator/templates/<controller_name>_<template_name>', function( template ){
       var template_string = template.render( data ); // bind object data to mustache template and render it as string
       var $template = template.toElement( data ); // bind object data to mustache template and return template as Element
@@ -96,7 +104,7 @@ moostachator includes my [moo-nojs-mvc framework](https://github.com/oelmekki/mo
 # Aknowledgment
 
 Moostachator is based upon some great libs :
-- [mustache](https://github.com/defunkt/mustache), the logic free templating engine
-- [mustache.js](https://github.com/janl/mustache.js), mustache javascript support
-- [poirot](https://github.com/olivernn/poirot), rails mustache support
-- [babilu](https://github.com/toretore/babilu), make locales accessible through javascript
+* [mustache](https://github.com/defunkt/mustache), the logic free templating engine
+* [mustache.js](https://github.com/janl/mustache.js), mustache javascript support
+* [poirot](https://github.com/olivernn/poirot), rails mustache support
+* [babilu](https://github.com/toretore/babilu), make locales accessible through javascript
