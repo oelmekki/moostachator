@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.1.0"
   s.add_dependency "mootools-rails"
   s.add_dependency "mustache"
+  s.add_dependency "babilu"
 
   s.add_development_dependency "sqlite3"
 end
