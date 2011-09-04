@@ -1,0 +1,25 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+{{#items}}
+  <tr>
+    <td>{{title}}</td>
+    <td>{{description}}</td>
+    <td><a href="{{show_path}}">Show</a></td>
+    <td><a href="{{edit_path}}">Edit</a></td>
+    <td><a href="{{destroy_path}}" data-method="delete" data-confirm="Are you sure?">Destroy</a></td>
+  </tr>
+{{/items}}
+</table>
+
+<br />
+
+<a href="{{new_path}}">New Item</a>
