@@ -5,5 +5,15 @@
 // the compiled file.
 //
 //= require mootools
+//= require mootools-more
 //= require mootools_ujs
+//= require moostachator/mustache
+//= require moostachator/Framework/ClassMethods
+//= require moostachator/Framework/Model
+//= require moostachator/Framework/HashChange
+//= require moostachator/Framework/Route
+//= require moostachator/Framework/RouterModule
+//= require moostachator/Framework/Template
+//= require moostachator/Framework/View
+//= require moostachator/Framework/Controller
 //= require_tree .
