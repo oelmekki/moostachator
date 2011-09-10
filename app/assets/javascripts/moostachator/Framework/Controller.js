@@ -115,6 +115,10 @@ this.Controller = new Class({
       throw new Error( 'Controller : selector "' + e.el + '" do not return any element.' );
     }
 
+    if ( ! e.type ){
+      throw new Error( 'Controller : no event type specified for ' + ( e.delegate || e.el ) + '.' );
+    }
+
     callback_name = this._getCallbackName( e );
     view          = this.view;
     debug         = this.options.debug;

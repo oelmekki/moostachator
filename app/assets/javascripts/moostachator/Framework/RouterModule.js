@@ -6,7 +6,7 @@ Framework.RouterModule = new Class({
 //   }
 // }
   initRoutes: function(){
-    var first_pop = true;
+    var first_pop = ! Browser.firefox; // firefox doesn't fire popstate on first load
 
     if ( ! this.options.base_path ){
       throw new Error( 'You must specify a base_path options.' );
@@ -136,9 +136,11 @@ Framework.RouterModule = new Class({
     // change route from an element event
     if ( typeOf( route_name ) == 'element' ){
       params = new Hash();
-      route_name.get( 'data-params' ).replace( /(.*?)=([^,]+),?/g, function( match, key, value ){
-        params.set( key, value );
-      });
+      if ( route_name.get( 'data-params' ) ){
+        route_name.get( 'data-params' ).replace( /(.*?)=([^,]+),?/g, function( match, key, value ){
+          params.set( key, value );
+        });
+      }
 
       route_name = route_name.get( 'data-route' );
     }

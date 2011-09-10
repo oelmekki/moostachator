@@ -51,6 +51,14 @@ this.View = new Class({
       return document.getElement( 'body' );
     }
 
+    if ( key == 'window' ){
+      return window;
+    }
+
+    if ( key == 'document' ){
+      return document;
+    }
+
     if ( this.hasOwnProperty( '$' + key ) ){
       return this[ '$' + key ];
     }
